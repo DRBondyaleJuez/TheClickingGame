@@ -1,0 +1,82 @@
+.header {
+    /* position: fixed;*/
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+div.logo-banner {
+    /* display: flex;*/
+    background: #ffffff;
+    /*background-color: #e6294f;*/
+    max-height: 150px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div.logo-banner img {
+    width: 100%;
+    max-width: 1000px;
+    /*min-height: 100px;
+    /* Image width will be relative to its container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+}
+
+
+.select_game_section_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font: bolder;
+    padding-left: 20%;
+    font-size: 200%;
+}
+
+.game_selection_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game_option_card {
+    position: relative;
+    /*height: 300px;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game_option_card:hover {
+    box-shadow: 5px 5px 10px 0px #858585;
+    position: relative;
+}
+
+.game_option_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.game_option_image {
+    width: 100%;
+    width: 500px;
+    /* Image width will be relative to its container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+}
+
+.game_option_title {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bolder;
+    font-size: 200%;
+}
