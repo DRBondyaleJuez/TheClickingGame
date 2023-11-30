@@ -102,7 +102,7 @@ function startGame() {
 
 function updateCountdown() {
     if (countdownCounter > 0) {
-        countdown_container.innerHTML = `<img src="assets/countdown/${countdownCounter}.png" alt="Gif Clicking Background">`
+        countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/countdown/${countdownCounter}.png" alt="Gif Clicking Background">`
     } else {
         clearInterval(countdownInterval); //Stop the interval activity
         countdown_container.innerHTML = '';
@@ -248,7 +248,7 @@ function finishGame() {
     const numberRoundsSetHtml = `<input class="rounds_input" id="rounds_input" type="number" value="1">`
     numberOfRoundsSection.innerHTML = numberRoundsSetHtml
 
-    countdown_container.innerHTML = `<img src="assets/finishedTick.png" alt="Gif Clicking Background">`;
+    countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/finishedTick.png" alt="Gif Clicking Background">`;
 
     console.log('Game Finished. Time:' + time_display.value);
     gameOnState = false;
