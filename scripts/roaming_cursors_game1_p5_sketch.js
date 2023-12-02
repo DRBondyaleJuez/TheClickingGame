@@ -18,7 +18,7 @@ function setup() {
 
     cnv.parent('canvas-container');
 
-    numberOfArrows = 200;
+    numberOfArrows = 500;
     identicalDesvRange = 150;
     chosenId = -1;
     minTimeStopped = 5;
