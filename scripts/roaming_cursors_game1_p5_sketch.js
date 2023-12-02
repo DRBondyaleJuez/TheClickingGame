@@ -18,7 +18,7 @@ function setup() {
 
     cnv.parent('canvas-container');
 
-    numberOfArrows = 400;
+    numberOfArrows = 500;
     identicalDesvRange = 150;
     chosenId = -1;
     minTimeStopped = 5;
@@ -33,7 +33,7 @@ function setup() {
         let speedy = random(0.001, 0.04);
         let rangex = random(0, width);
         let rangey = random(0, height);
-        let imgResize = random(0.3, 1.2);
+        let imgResize = random(0.5, 1.2);
 
         let currentCursorCopy = new cursorImage(idNumber, imgSmallWhite, x, y, speedx, speedy, rangex, rangey, imgResize);
 
@@ -77,7 +77,11 @@ class cursorImage {
         this.speedy = speedy;
 
         //Follow cursor
-        this.identicalDesv = random(-identicalDesvRange, identicalDesvRange);
+        this.identicalDesvX = random(-identicalDesvRange, identicalDesvRange);
+        this.identicalDesvY = random(-identicalDesvRange, identicalDesvRange);
+
+        this.modx = random([-1, 1]);
+        this.mody = random([-1, 1]);
 
         //follow cursor state
         this.followCursor = random(0, 10);
@@ -108,10 +112,14 @@ class cursorImage {
         let followCursorThisTime = noise(this.followCursor);
         if (this.idNumber == chosenId) {
             image(this.imageToCopy, mouseX, mouseY);
-        } else if (followCursorThisTime > 0.8) {
-            image(this.imageToCopy, mouseX + this.identicalDesv, mouseY + this.indenticalDesv);
-        } else if (followCursorThisTime > 0.6) {
+        } else if (followCursorThisTime > 0.75) {
+            image(this.imageToCopy, mouseX + this.identicalDesvX, mouseY + this.identicalDesvY);
+        } else if (followCursorThisTime > 0.65) {
             image(this.imageToCopy, (mouseX + this.xPosition) / 2, (mouseY + this.yPosition) / 2);
+        } else if (followCursorThisTime > 0.55) {
+            image(this.imageToCopy, (mouseX + (this.modx * this.xPosition / 2)), (mouseY + (this.mody * this.yPosition / 2)));
+        } else if (followCursorThisTime > 0.45) {
+            image(this.imageToCopy, (mouseX + (this.modx * this.xPosition / 3)), (mouseY + (this.mody * this.yPosition / 3)));
         } else {
             image(this.imageToCopy, this.xPosition, this.yPosition);
         }

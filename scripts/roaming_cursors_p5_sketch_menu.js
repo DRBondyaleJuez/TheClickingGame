@@ -1,5 +1,6 @@
 
 let movingCursor = document.querySelector(".cursor_image_container");
+let cursorMovingSection;
 let x;
 let y;
 let cursorCopies = [];
@@ -19,7 +20,7 @@ function setup() {
     maxTimeStopped = 0;
     probabilityOfStopping = 0;
 
-    const cursorMovingSection = document.querySelector('.cursor_moving_around_section');
+    cursorMovingSection = document.querySelector('.cursor_moving_around_section');
 
     for (let i = 0; i < numberOfArrows; i++) {
         idNumber = i;
@@ -29,10 +30,10 @@ function setup() {
         let speedy = random(0.001, 0.01);
         let rangex = random(0, maxWidth);
         let rangey = random(0, maxHeight);
-        let sizeCursor = random(16, 22);
+        let cursorSize = random(15, 25);
 
         let currentHTMLForCursor = `<div class="cursor_image_container" id=${'cursor_image_container' + i}>
-        <img src="assets/cursors/smallWhiteCursor.png" alt="Cursor image">
+        <img style = "max-width:${cursorSize}px" src="assets/cursors/smallWhiteCursor.png" alt="Cursor image">
     </div>`
         cursorMovingSection.innerHTML += currentHTMLForCursor;
 
@@ -126,6 +127,7 @@ window.addEventListener('resize', handleResize);
 
 // Initial call to get the initial viewport size
 function handleResize() {
+    cursorMovingSection.innerHTML = ""; // to prevent continuous growing of the innerhtml of the section
     setup();
     draw();
 }
