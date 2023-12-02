@@ -43,7 +43,7 @@ headerButton.addEventListener('click', () => {
 
 startOrRestartGameButton.addEventListener('click', () => {
     console.log('Start Game')
-    startOrRestartGameButton.innerHTML = '<img src="assets/restartLabel.png" alt="The Restart Button Label">'
+    startOrRestartGameButton.innerHTML = '<img src="../assets/restartLabel.png" alt="The Restart Button Label">'
     setNewGame();
     startGame();
 });
@@ -107,7 +107,7 @@ function startGame() {
 
 function updateCountdown() {
     if (countdownCounter > 0) {
-        countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/countdown/${countdownCounter}.png" alt="Gif Clicking Background">`
+        countdown_container.innerHTML = `<img style="height:auto;width:100%" src="../assets/countdown/${countdownCounter}.png" alt="Gif Clicking Background">`
     } else {
         clearInterval(countdownInterval); //Stop the interval activity
         countdown_container.innerHTML = '';
@@ -255,12 +255,12 @@ function finishGame() {
 
     randomButtonContainer.innerHTML = '';
 
-    startOrRestartGameButton.innerHTML = '<img src="assets/startLabel.png" alt="The Start Button Label">';
+    startOrRestartGameButton.innerHTML = '<img src="../assets/startLabel.png" alt="The Start Button Label">';
 
     const numberRoundsSetHtml = `<input class="rounds_input" id="rounds_input" type="number" value="1">`
     numberOfRoundsSection.innerHTML = numberRoundsSetHtml
 
-    countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/finishedTick.png" alt="Finish Game badge">`;
+    countdown_container.innerHTML = `<img style="height:auto;width:100%" src="../assets/finishedTick.png" alt="Finish Game badge">`;
 
     eliminateChosenId(); //This is a method in the other js file roaming_cursors_p5_sketch.js
     gameContainer.style.cursor = 'default';

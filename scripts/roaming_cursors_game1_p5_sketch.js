@@ -8,7 +8,7 @@ let identicalDesvRange;
 
 function preload() {
     // Load the image during the preload phase
-    imgSmallWhite = loadImage('/assets/cursors/smallWhiteCursor.png');
+    imgSmallWhite = loadImage('../assets/cursors/smallWhiteCursor.png');
 
 }
 
@@ -18,7 +18,7 @@ function setup() {
 
     cnv.parent('canvas-container');
 
-    numberOfArrows = 500;
+    numberOfArrows = 100;
     identicalDesvRange = 150;
     chosenId = -1;
     minTimeStopped = 5;
