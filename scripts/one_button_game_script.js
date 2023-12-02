@@ -1,3 +1,4 @@
+
 //Getting all non changing elements from the view:
 
 //Header Button
@@ -64,6 +65,10 @@ function setNewGame() {
         clearInterval(countdownInterval);
         clearInterval(timerInterval);
     }
+
+    gameContainer.style.cursor = 'none';
+    changeChosenId(); //This is a method in the other js file roaming_cursors_p5_sketch.js
+
     time_display.innerHTML = '00:00:00:000';
     countdown_container.innerHTML = '';
     randomButtonContainer.innerHTML = '';
@@ -130,6 +135,12 @@ function setTimeInTimer() {
     const minutes = Math.floor((currentTime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((currentTime % (1000 * 60)) / 1000);
     const miliseconds = Math.floor(currentTime % 1000);
+
+    //ADDING SOME DIFFICULTY EVERY 15 seconds
+    if (seconds == 15) {
+        changeChosenId(); //This is a method in the other js file roaming_cursors_p5_sketch.js
+    }
+
 
     //Build time display
     const correctedHours = add0IfNeeded(String(hours));
@@ -234,6 +245,7 @@ function setRandomButtonEventListener() {
             gameOnState = false;
         } else {
             setTimeout(createRandomButton, 10);
+            changeChosenId(); //This is a method in the other js file roaming_cursors_p5_sketch.js
         }
     });
 }
@@ -248,7 +260,10 @@ function finishGame() {
     const numberRoundsSetHtml = `<input class="rounds_input" id="rounds_input" type="number" value="1">`
     numberOfRoundsSection.innerHTML = numberRoundsSetHtml
 
-    countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/finishedTick.png" alt="Gif Clicking Background">`;
+    countdown_container.innerHTML = `<img style="height:auto;width:100%" src="assets/finishedTick.png" alt="Finish Game badge">`;
+
+    eliminateChosenId(); //This is a method in the other js file roaming_cursors_p5_sketch.js
+    gameContainer.style.cursor = 'default';
 
     console.log('Game Finished. Time:' + time_display.value);
     gameOnState = false;

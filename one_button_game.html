@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="Daniel R Bondyale Juez" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>The Clicking Game</title>
 
     <!-- Favicon -->
@@ -17,10 +18,14 @@
     <link rel="stylesheet" href="styles/general_styles.css">
     <link rel="stylesheet" href="styles/one_button_game_style.css">
 
+    <!-- P5js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="scripts/roaming_cursors_game1_p5_sketch.js"></script>
 
 </head>
 
 <body>
+
     <!-- HEADER -->
     <div class="header_and_game_navigation">
         <div class="header">
@@ -54,17 +59,14 @@
 
     <div class="game_section_container" id="game_section_container">
 
-        <div class="game_section">
-            <img src="assets/game_background.gif" alt="Gif Clicking Background">
-        </div>
-
         <div class="countdown">
         </div>
 
         <div class="random_button_container">
 
-            <!--<button style="background-color:crimson; top:1000px; left:100px" class="'testButton">click ME</button>-->
-            <!--<button class="testButton">click ME</button>-->
+        </div>
+
+        <div id="canvas-container">
         </div>
 
     </div>
