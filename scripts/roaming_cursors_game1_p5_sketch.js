@@ -8,7 +8,7 @@ let identicalDesvRange;
 
 function preload() {
     // Load the image during the preload phase
-    imgSmallWhite = loadImage('/assets/cursors/smallWhiteCursor.png');
+    imgSmallWhite = loadImage('assets/cursors/smallWhiteCursor.png');
 
 }
 
