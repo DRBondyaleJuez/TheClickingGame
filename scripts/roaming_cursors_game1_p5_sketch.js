@@ -112,13 +112,13 @@ class cursorImage {
         let followCursorThisTime = noise(this.followCursor);
         if (this.idNumber == chosenId) {
             image(this.imageToCopy, mouseX, mouseY);
-        } else if (followCursorThisTime > 0.75) {
+        } else if (followCursorThisTime > 0.82) {
             image(this.imageToCopy, mouseX + this.identicalDesvX, mouseY + this.identicalDesvY);
-        } else if (followCursorThisTime > 0.65) {
+        } else if (followCursorThisTime > 0.75) {
             image(this.imageToCopy, (mouseX + this.xPosition) / 2, (mouseY + this.yPosition) / 2);
-        } else if (followCursorThisTime > 0.55) {
+        } else if (followCursorThisTime > 0.65) {
             image(this.imageToCopy, (mouseX + (this.modx * this.xPosition / 2)), (mouseY + (this.mody * this.yPosition / 2)));
-        } else if (followCursorThisTime > 0.45) {
+        } else if (followCursorThisTime > 0.55) {
             image(this.imageToCopy, (mouseX + (this.modx * this.xPosition / 3)), (mouseY + (this.mody * this.yPosition / 3)));
         } else {
             image(this.imageToCopy, this.xPosition, this.yPosition);
