@@ -33,7 +33,7 @@ function setup() {
         let cursorSize = random(15, 25);
 
         let currentHTMLForCursor = `<div class="cursor_image_container" id=${'cursor_image_container' + i}>
-        <img style = "max-width:${cursorSize}px" src="../assets/cursors/smallWhiteCursor.png" alt="Cursor image">
+        <img style = "max-width:${cursorSize}px" src="/assets/cursors/smallWhiteCursor.png" alt="Cursor image">
     </div>`
         cursorMovingSection.innerHTML += currentHTMLForCursor;
 

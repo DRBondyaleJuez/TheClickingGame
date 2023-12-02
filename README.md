@@ -27,7 +27,7 @@ ___
 
 </div>
 
-The site can be visited [(here)](https://drbondyalejuez.github.io/TheClickingGame/).
+The site can be visited [(here)](https://drbondyalejuez.github.io/TheClickingGame/index.html).
 
 Only 1 of the games is functional the others remain under development for now.
 
