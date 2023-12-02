@@ -23,8 +23,9 @@ ___
 
 <div style="text-align: center;">
 
-![gameGIF](https://user-images.githubusercontent.com/98281752/227627120-2130486f-02bb-452d-a0dc-dcf9ebee8b27.gif)
+![gameGIF](https://github.com/DRBondyaleJuez/TheClickingGame/assets/98281752/95a45073-9cb3-4ac3-ad7f-ccd639532d39)
 
+</div>
 
 The site can be visited here.
 
