@@ -37,7 +37,7 @@ let timerInterval;
 
 headerButton.addEventListener('click', () => {
     console.log('clicked game option corresponding to: index.html')
-    goToWebPage('TheClickingGame/index.html');
+    goToWebPage('../TheClickingGame/index.html');
 })
 
 

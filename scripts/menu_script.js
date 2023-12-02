@@ -30,5 +30,5 @@ gameModeOptions.forEach(function (gameModeOption, index) {
 
 function goToWebPage(htmlLocation) {
     console.log('Taking user to location: ' + htmlLocation)
-    window.location.href = 'TheClickingGame/' + htmlLocation;
+    window.location.href = '../TheClickingGame/' + htmlLocation;
 }
