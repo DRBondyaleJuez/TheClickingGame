@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Daniel R Bondyale Juez" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>The Clicking Game</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- CSS Styles-->
+    <link rel="stylesheet" href="../styles/one_button_game_style.css">
+
+    <!-- P5js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="scripts/roaming_cursors_game1_p5_sketch.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header_and_game_navigation">
+        <div class="header">
+            <!-- Top Banner -->
+            <div class="logo-banner">
+                <img src="assets/Game_Title_Banner.png" alt="The Clicking Game Banner Title">
+            </div>
+        </div>
+
+        <!-- GAME OPTION NAVIGATION SECTION -->
+        <div class="time_rounds_restart_menu">
+            <div class="time_section">
+                <p class="time_label">TIME: </p>
+                <p class="time_display"> 00:00:00:000 </p>
+            </div>
+
+            <div class="rounds_section">
+                <p class="rounds_label"> ROUNDS: </p>
+                <div class="number_of_rounds_section">
+                    <input class="rounds_input" id="rounds_input" type="number" value="1">
+                </div>
+            </div>
+
+            <div class="restart_button_container">
+                <img src="../assets/startLabel.png" alt="The Restart Button Label">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="game_section_container" id="game_section_container">
+
+        <div class="countdown">
+        </div>
+
+        <div class="random_button_container">
+
+        </div>
+
+        <div id="canvas-container">
+        </div>
+
+    </div>
+
+    <script src="../scripts/one_button_game_script.js"></script>
+
+</body>
+
+</html>

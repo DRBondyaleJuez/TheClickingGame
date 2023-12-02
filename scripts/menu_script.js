@@ -22,6 +22,7 @@ gameModeOptions.forEach(function (gameModeOption, index) {
 
     gameModeOption.addEventListener('click', () => {
         console.log('clicked game option corresponding to: ' + gamesHTMLLocations[index])
+        if (index > 0) { return } //This is just to filter inactive buttons at the moment
         goToWebPage(gamesHTMLLocations[index]);
     })
 
@@ -29,5 +30,5 @@ gameModeOptions.forEach(function (gameModeOption, index) {
 
 function goToWebPage(htmlLocation) {
     console.log('Taking user to location: ' + htmlLocation)
-    window.location.href = '/' + htmlLocation;
+    window.location.href = 'TheClickingGame/' + htmlLocation;
 }
