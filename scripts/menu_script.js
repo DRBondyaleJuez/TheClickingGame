@@ -29,5 +29,5 @@ gameModeOptions.forEach(function (gameModeOption, index) {
 
 function goToWebPage(htmlLocation) {
     console.log('Taking user to location: ' + htmlLocation)
-    window.location.href = '../' + htmlLocation;
+    window.location.href = '/' + htmlLocation;
 }
