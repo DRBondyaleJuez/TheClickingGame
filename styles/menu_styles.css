@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.body {
+    margin: 0%;
+}
+
 div.logo-banner {
     /* display: flex;*/
     background: #ffffff;
@@ -98,7 +102,6 @@ div.logo-banner img {
 
 .cursor_moving_around_section {
     position: relative;
-    /*height: 0%;*/
 }
 
 .cursor_image_container {
@@ -107,4 +110,19 @@ div.logo-banner img {
 
 .cursor_image_container img {
     max-width: 18px;
+}
+
+/*This canvas style is modify and make as small as possible a section of the html code
+that is created by the P5 library*/
+canvas {
+    max-height: 0;
+}
+
+footer {
+    margin-top: 5%;
+    padding: 2%;
+    background-color: #000000;
+    color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
 }

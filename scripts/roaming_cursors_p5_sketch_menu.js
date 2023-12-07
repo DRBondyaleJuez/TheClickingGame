@@ -40,10 +40,8 @@ function setup() {
         let currentCursorCopy = new cursorImage('cursor_image_container' + i, x, y, speedx, speedy, rangex, rangey);
 
         cursorCopies.push(currentCursorCopy);
-        console.log(document.getElementById(`${'cursor_image_container' + i}`));
     }
 
-    console.log(document.querySelector('.cursor_moving_around_section'));
 }
 
 function draw() {
@@ -115,8 +113,6 @@ class cursorImage {
 
         document.getElementById(this.htmlContainerById).style.left = newLeft;
         document.getElementById(this.htmlContainerById).style.top = newTop;
-
-        console.log(newTop);
 
     }
 }
